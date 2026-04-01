@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public API Finder - Directory of Free Public APIs for Developers</title>
+  <meta name="description" content="Discover and explore 200+ free public APIs for developers. Browse by category, search instantly, save favorites, and find the perfect API for your next project.">
+  <meta name="keywords" content="free public APIs, API directory, open APIs for developers, public API list, free REST APIs, API database for developers">
+  <meta name="author" content="Public API Finder">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://public-api-finder.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Public API Finder - Directory of Free Public APIs for Developers">
+  <meta property="og:description" content="Discover and explore 200+ free public APIs for developers. Browse by category, search instantly, save favorites.">
+  <meta property="og:url" content="https://public-api-finder.vercel.app/">
+  <meta property="og:image" content="https://public-api-finder.vercel.app/images/og-image.png">
+  <meta property="og:site_name" content="Public API Finder">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Public API Finder - Directory of Free Public APIs for Developers">
+  <meta name="twitter:description" content="Discover and explore 200+ free public APIs for developers.">
+  <meta name="twitter:image" content="https://public-api-finder.vercel.app/images/og-image.png">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Public API Finder",
+    "description": "Directory of Free Public APIs for Developers",
+    "url": "https://public-api-finder.vercel.app/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://public-api-finder.vercel.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Free Public APIs",
+    "description": "A curated directory of 200+ free public APIs for developers",
+    "numberOfItems": 200,
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "OpenWeatherMap", "url": "https://openweathermap.org/api"},
+      {"@type": "ListItem", "position": 2, "name": "CoinGecko", "url": "https://www.coingecko.com/en/api"},
+      {"@type": "ListItem", "position": 3, "name": "TMDb", "url": "https://developer.themoviedb.org/"},
+      {"@type": "ListItem", "position": 4, "name": "NASA", "url": "https://api.nasa.gov/"},
+      {"@type": "ListItem", "position": 5, "name": "PokeAPI", "url": "https://pokeapi.co/"}
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔌</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7098271335538021" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#F8F6F2] min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-white/80 backdrop-blur-md border-b border-[#E5E2DC] sticky top-0 z-40 no-print">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 py-4">
+      <div class="flex items-center justify-between gap-4">
+        <!-- Logo & Title -->
+        <a href="/" class="flex items-center gap-3 flex-shrink-0">
+          <div class="w-10 h-10 bg-[#5B6ABF] rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-[#2D2D2D] leading-tight" data-i18n="title">Public API Finder</h1>
+            <p class="text-xs text-[#6B7280] hidden sm:block" data-i18n="subtitle">Directory of Free Public APIs for Developers</p>
+          </div>
+        </a>
+
+        <!-- Right side: Random + Lang + Mobile menu -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button onclick="showRandomApi()" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-[#F5C542] text-[#2D2D2D] rounded-xl font-medium hover:bg-[#e6b63b] transition-colors shadow-sm text-sm" aria-label="Discover Random API" data-i18n-title="random_api">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <span data-i18n="random_api">Discover Random API</span>
+          </button>
+          <div id="lang-dropdown"></div>
+
+          <!-- Mobile menu button -->
+          <button onclick="toggleMobileSidebar()" class="lg:hidden p-2 rounded-lg hover:bg-[#E5E2DC] transition-colors" aria-label="Toggle menu">
+            <svg class="w-6 h-6 text-[#2D2D2D]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Ad Banner Top -->
+  <div id="ad-banner-top" class="max-w-[1280px] mx-auto px-4 sm:px-6 mt-4 no-print"></div>
+
+  <!-- Mobile Horizontal Tabs -->
+  <div class="lg:hidden max-w-[1280px] mx-auto px-4 sm:px-6 mt-4 no-print">
+    <div id="mobile-tabs" class="flex gap-2 overflow-x-auto pb-2"></div>
+  </div>
+
+  <!-- Mobile Random API Button -->
+  <div class="sm:hidden max-w-[1280px] mx-auto px-4 mt-3 no-print">
+    <button onclick="showRandomApi()" class="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#F5C542] text-[#2D2D2D] rounded-xl font-medium hover:bg-[#e6b63b] transition-colors shadow-sm text-sm" aria-label="Discover Random API">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      <span data-i18n="random_api">Discover Random API</span>
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-[1280px] mx-auto px-4 sm:px-6 py-6 w-full">
+    <div class="flex gap-6">
+
+      <!-- Desktop Sidebar -->
+      <aside class="hidden lg:block w-64 flex-shrink-0 no-print">
+        <div class="sticky top-24">
+          <h2 class="text-sm font-semibold text-[#6B7280] uppercase tracking-wider mb-3 px-4" data-i18n="categories">Categories</h2>
+          <nav id="category-list" class="space-y-1" aria-label="API Categories"></nav>
+        </div>
+      </aside>
+
+      <!-- Content Area -->
+      <div class="flex-grow min-w-0">
+        <!-- Search Bar -->
+        <div class="mb-6">
+          <div class="relative">
+            <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6B7280]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" id="search-input" oninput="handleSearch(event)" data-i18n="search_placeholder" placeholder="Search APIs by name or description..." class="w-full pl-12 pr-12 py-3.5 bg-white border border-[#E5E2DC] rounded-xl text-[#2D2D2D] placeholder-[#9ca3af] focus:ring-2 focus:ring-[#5B6ABF] focus:border-transparent outline-none transition-all shadow-sm" aria-label="Search APIs">
+            <button onclick="clearSearch()" class="absolute right-4 top-1/2 -translate-y-1/2 text-[#9ca3af] hover:text-[#6B7280] transition-colors hidden" id="clear-search-btn" aria-label="Clear search">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
+          <div class="flex items-center justify-between mt-3">
+            <p id="result-count" class="text-sm text-[#6B7280]"></p>
+            <div id="favorites-toolbar" class="hidden"></div>
+          </div>
+        </div>
+
+        <!-- API Grid -->
+        <section id="api-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4" aria-label="API Directory">
+          <!-- Cards rendered by JS -->
+          <div class="col-span-full text-center py-16">
+            <div class="inline-flex items-center gap-3 text-[#6B7280]">
+              <svg class="w-6 h-6 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/></svg>
+              Loading APIs...
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Desktop Sidebar Ad -->
+      <aside class="hidden xl:block w-48 flex-shrink-0 no-print">
+        <div class="sticky top-24">
+          <div id="ad-sidebar"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Ad Banner Footer -->
+  <div id="ad-banner-footer" class="max-w-[1280px] mx-auto px-4 sm:px-6 mb-4 no-print"></div>
+
+  <!-- Footer -->
+  <footer class="bg-white/80 backdrop-blur-md border-t border-[#E5E2DC] mt-auto">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 py-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 bg-[#5B6ABF] rounded-lg flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <span class="font-bold text-[#2D2D2D]">Public API Finder</span>
+          </div>
+          <p class="text-sm text-[#6B7280]">A free, open directory of public APIs for developers, students, and hobbyists.</p>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h3 class="font-semibold text-[#2D2D2D] mb-3">Pages</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="pages/about.html" class="text-[#6B7280] hover:text-[#5B6ABF] transition-colors" data-i18n="about">About</a></li>
+            <li><a href="pages/faq.html" class="text-[#6B7280] hover:text-[#5B6ABF] transition-colors" data-i18n="faq">How to Use</a></li>
+            <li><a href="pages/privacy.html" class="text-[#6B7280] hover:text-[#5B6ABF] transition-colors" data-i18n="privacy">Privacy Policy</a></li>
+            <li><a href="pages/terms.html" class="text-[#6B7280] hover:text-[#5B6ABF] transition-colors" data-i18n="terms">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="font-semibold text-[#2D2D2D] mb-3">Connect</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="mailto:taeshinkim11@gmail.com?subject=Public%20API%20Finder%20Feedback" class="text-[#6B7280] hover:text-[#5B6ABF] transition-colors inline-flex items-center gap-2" data-i18n="feedback">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                Send Feedback
+              </a>
+            </li>
+            <li>
+              <button onclick="shareApi('Public API Finder', 'https://public-api-finder.vercel.app/')" class="text-[#6B7280] hover:text-[#5B6ABF] transition-colors inline-flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+                <span data-i18n="share">Share</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Visitor Counter -->
+        <div>
+          <h3 class="font-semibold text-[#2D2D2D] mb-3" data-i18n="visitor_count">Visitors</h3>
+          <p id="visitor-counter" class="text-sm text-[#6B7280]">Today: 0 | Total: 0</p>
+          <p class="text-xs text-[#9ca3af] mt-2">Data sourced from public-apis. Last updated: April 2026.</p>
+        </div>
+      </div>
+
+      <div class="border-t border-[#E5E2DC] pt-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-[#9ca3af]">
+        <p>&copy; 2026 Public API Finder. All rights reserved.</p>
+        <p>Built with vanilla HTML, CSS & JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sidebar Overlay -->
+  <div id="mobile-sidebar" class="hidden fixed inset-0 z-50">
+    <div class="absolute inset-0 bg-black/30 modal-backdrop" onclick="closeMobileSidebar()"></div>
+    <div class="absolute left-0 top-0 bottom-0 w-72 bg-[#F8F6F2] shadow-2xl overflow-y-auto p-6">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="font-bold text-[#2D2D2D] text-lg" data-i18n="categories">Categories</h2>
+        <button onclick="closeMobileSidebar()" class="p-2 rounded-lg hover:bg-[#E5E2DC] transition-colors" aria-label="Close menu">
+          <svg class="w-5 h-5 text-[#2D2D2D]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav id="mobile-category-list" class="space-y-1"></nav>
+    </div>
+  </div>
+
+  <!-- Random API Modal -->
+  <div id="random-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/30 modal-backdrop" onclick="closeRandomModal()"></div>
+    <div class="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 max-h-[90vh] overflow-y-auto">
+      <button onclick="closeRandomModal()" class="absolute top-4 right-4 p-2 rounded-lg hover:bg-[#E5E2DC] transition-colors" aria-label="Close">
+        <svg class="w-5 h-5 text-[#6B7280]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div id="random-content"></div>
+    </div>
+  </div>
+
+  <!-- Share Modal -->
+  <div id="share-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/30 modal-backdrop" onclick="closeShareModal()"></div>
+    <div class="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-8">
+      <button onclick="closeShareModal()" class="absolute top-4 right-4 p-2 rounded-lg hover:bg-[#E5E2DC] transition-colors" aria-label="Close">
+        <svg class="w-5 h-5 text-[#6B7280]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div id="share-content"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/ads.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

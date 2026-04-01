@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#F8F6F2"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="white" opacity="0.9" stroke="#E5E2DC" stroke-width="2"/>
+  <rect x="80" y="200" width="80" height="80" rx="20" fill="#5B6ABF"/>
+  <text x="95" y="258" font-family="monospace" font-size="40" fill="white">&lt;/&gt;</text>
+  <text x="180" y="240" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#2D2D2D">Public API Finder</text>
+  <text x="180" y="280" font-family="system-ui, sans-serif" font-size="24" fill="#6B7280">Directory of Free Public APIs for Developers</text>
+  <text x="80" y="380" font-family="system-ui, sans-serif" font-size="20" fill="#6B7280">200+ APIs | 15+ Categories | Instant Search | Favorites | 8 Languages</text>
+  <rect x="80" y="420" width="120" height="40" rx="10" fill="#5B6ABF" opacity="0.1"/>
+  <text x="100" y="446" font-family="system-ui, sans-serif" font-size="16" fill="#5B6ABF">Weather</text>
+  <rect x="220" y="420" width="110" height="40" rx="10" fill="#5B6ABF" opacity="0.1"/>
+  <text x="240" y="446" font-family="system-ui, sans-serif" font-size="16" fill="#5B6ABF">Finance</text>
+  <rect x="350" y="420" width="100" height="40" rx="10" fill="#5B6ABF" opacity="0.1"/>
+  <text x="370" y="446" font-family="system-ui, sans-serif" font-size="16" fill="#5B6ABF">Games</text>
+  <rect x="470" y="420" width="110" height="40" rx="10" fill="#5B6ABF" opacity="0.1"/>
+  <text x="490" y="446" font-family="system-ui, sans-serif" font-size="16" fill="#5B6ABF">Science</text>
+  <rect x="600" y="420" width="100" height="40" rx="10" fill="#5B6ABF" opacity="0.1"/>
+  <text x="620" y="446" font-family="system-ui, sans-serif" font-size="16" fill="#5B6ABF">Music</text>
+  <rect x="720" y="420" width="100" height="40" rx="10" fill="#F5C542" opacity="0.2"/>
+  <text x="740" y="446" font-family="system-ui, sans-serif" font-size="16" fill="#b8940f">+ More</text>
+</svg>

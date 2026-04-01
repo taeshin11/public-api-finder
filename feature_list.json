@@ -1,0 +1,20 @@
+{
+  "project": "PublicAPIFinder",
+  "features": [
+    { "id": "F01", "name": "Project Scaffold & Tailwind Setup", "milestone": 1, "status": "pending" },
+    { "id": "F02", "name": "Static JSON Data File (public-apis)", "milestone": 1, "status": "pending" },
+    { "id": "F03", "name": "Category Sidebar/Tabs Navigation", "milestone": 2, "status": "pending" },
+    { "id": "F04", "name": "Search with Instant Filter", "milestone": 2, "status": "pending" },
+    { "id": "F05", "name": "API Cards Display", "milestone": 2, "status": "pending" },
+    { "id": "F06", "name": "Random API Button", "milestone": 3, "status": "pending" },
+    { "id": "F07", "name": "Favorites System (localStorage)", "milestone": 3, "status": "pending" },
+    { "id": "F08", "name": "Auto i18n (8+ Languages)", "milestone": 4, "status": "pending" },
+    { "id": "F09", "name": "SEO Optimization", "milestone": 4, "status": "pending" },
+    { "id": "F10", "name": "Ad Integration (Adsterra + AdSense)", "milestone": 5, "status": "pending" },
+    { "id": "F11", "name": "Google Sheets Webhook", "milestone": 5, "status": "pending" },
+    { "id": "F12", "name": "Visitor Counter (Today + Total)", "milestone": 5, "status": "pending" },
+    { "id": "F13", "name": "Feedback & Social Sharing", "milestone": 6, "status": "pending" },
+    { "id": "F14", "name": "Static Pages (About, FAQ, Privacy, Terms)", "milestone": 6, "status": "pending" },
+    { "id": "F15", "name": "Deployment to Vercel", "milestone": 7, "status": "pending" }
+  ]
+}
