@@ -1,0 +1,21 @@
+{
+  "name": "Public API Finder - Free API Directory",
+  "short_name": "API Finder",
+  "description": "Discover and explore 200+ free public APIs for developers.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#5B6ABF",
+  "background_color": "#F8F6F2",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='24' fill='%235B6ABF'/><text y='140' x='20' font-size='140'>🔌</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='64' fill='%235B6ABF'/><text y='380' x='40' font-size='380'>🔌</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

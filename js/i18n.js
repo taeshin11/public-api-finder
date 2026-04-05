@@ -334,6 +334,15 @@ const supportedLangs = ['EN','KO','JA','ZH','ES','DE','FR','PT'];
 const langNames = {EN:'English',KO:'Korean',JA:'Japanese',ZH:'Chinese',ES:'Spanish',DE:'German',FR:'French',PT:'Portuguese'};
 
 function detectLanguage() {
+  // URL param (?lang=xx) overrides all
+  const urlParam = new URLSearchParams(window.location.search).get('lang');
+  if (urlParam) {
+    const upper = urlParam.toUpperCase();
+    if (supportedLangs.includes(upper)) {
+      localStorage.setItem('paf_lang', upper);
+      return upper;
+    }
+  }
   const saved = localStorage.getItem('paf_lang');
   if (saved && supportedLangs.includes(saved)) return saved;
   const nav = (navigator.language || 'en').toUpperCase();
