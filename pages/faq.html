@@ -3,16 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Use / FAQ - Public API Finder</title>
-  <meta name="description" content="Learn how to use Public API Finder to discover free public APIs. Frequently asked questions about API search and browsing.">
+  <title>FAQ - Public API Finder | API Questions for Developers & Beginners</title>
+  <meta name="description" content="Frequently asked questions about public APIs, how to get started with API integration, what CORS means, rate limiting, authentication types, and how to use Public API Finder.">
+  <meta name="keywords" content="public API FAQ, what is a public API, how to use an API, CORS explanation, API rate limiting, API key, free APIs for developers">
   <link rel="canonical" href="https://public-api-finder.vercel.app/pages/faq.html">
   <link rel="manifest" href="/manifest.json">
-  <meta property="og:title" content="How to Use / FAQ - Public API Finder">
-  <meta property="og:description" content="Learn how to use Public API Finder to discover free public APIs.">
+  <meta property="og:title" content="FAQ - Public API Finder | API Questions Answered">
+  <meta property="og:description" content="Everything you need to know about public APIs, getting started with API integration, CORS, rate limiting, and authentication types.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔌</text></svg>">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../css/styles.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7098271335538021" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a public API?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A public API (Application Programming Interface) is a set of protocols that allows external developers to request data or functionality from a web service. Public APIs make their endpoints accessible to anyone, typically at no cost or via a free tier, allowing developers to integrate real-world data into their own applications without building that data source themselves." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started using a public API?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Getting started with a public API involves five steps: find a suitable API using a directory like Public API Finder, read the API documentation, register for an API key if required, make a test request using a tool like Postman or your browser, and integrate the API into your application code." }
+      },
+      {
+        "@type": "Question",
+        "name": "What does 'No Auth' mean for an API?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No Auth means the API does not require any form of authentication to access. You can call the API endpoint directly without providing an API key or going through any login flow. These APIs are ideal for beginners, quick prototypes, and learning projects because they remove the registration barrier entirely." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is CORS and why does it matter?",
+        "acceptedAnswer": { "@type": "Answer", "text": "CORS (Cross-Origin Resource Sharing) is a browser security mechanism that controls whether JavaScript running on one domain can make requests to a different domain. If an API does not support CORS, browser-based JavaScript applications cannot call it directly. CORS support is essential for frontend web developers building apps without a backend proxy." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is API rate limiting?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Rate limiting is a restriction placed by an API provider on how many requests you can make within a given time window. For example, an API might allow 100 requests per hour on its free tier. Understanding rate limits before choosing an API is essential for ensuring your application will work reliably under real usage conditions." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="bg-[#F8F6F2] min-h-screen flex flex-col">
   <header class="bg-white/80 backdrop-blur-md border-b border-[#E5E2DC] sticky top-0 z-40">
@@ -33,109 +67,138 @@
   </header>
 
   <main class="flex-grow max-w-3xl mx-auto px-4 sm:px-6 py-12 w-full">
-    <h1 class="text-3xl font-bold text-[#2D2D2D] mb-6">How to Use / FAQ</h1>
+    <h1 class="text-3xl font-bold text-[#2D2D2D] mb-6">Frequently Asked Questions</h1>
 
-    <section class="bg-white/90 rounded-xl border border-[#E5E2DC] p-6 sm:p-8 mb-6">
-      <h2 class="text-xl font-semibold text-[#2D2D2D] mb-4">Step-by-Step Guide</h2>
-      <ol class="space-y-4 text-[#6B7280]">
-        <li class="flex gap-3">
-          <span class="flex-shrink-0 w-8 h-8 bg-[#5B6ABF] text-white rounded-full flex items-center justify-center font-bold text-sm">1</span>
-          <div>
-            <strong class="text-[#2D2D2D]">Browse by Category</strong>
-            <p class="mt-1">Use the sidebar (desktop) or horizontal tabs (mobile) to filter APIs by category like Weather, Finance, Games, and more.</p>
-          </div>
-        </li>
-        <li class="flex gap-3">
-          <span class="flex-shrink-0 w-8 h-8 bg-[#5B6ABF] text-white rounded-full flex items-center justify-center font-bold text-sm">2</span>
-          <div>
-            <strong class="text-[#2D2D2D]">Search for APIs</strong>
-            <p class="mt-1">Type in the search bar to instantly filter APIs by name, description, or category. Results update as you type.</p>
-          </div>
-        </li>
-        <li class="flex gap-3">
-          <span class="flex-shrink-0 w-8 h-8 bg-[#5B6ABF] text-white rounded-full flex items-center justify-center font-bold text-sm">3</span>
-          <div>
-            <strong class="text-[#2D2D2D]">View API Details</strong>
-            <p class="mt-1">Each card shows the API name, description, authentication type, HTTPS support, and CORS compatibility.</p>
-          </div>
-        </li>
-        <li class="flex gap-3">
-          <span class="flex-shrink-0 w-8 h-8 bg-[#5B6ABF] text-white rounded-full flex items-center justify-center font-bold text-sm">4</span>
-          <div>
-            <strong class="text-[#2D2D2D]">Save Favorites</strong>
-            <p class="mt-1">Click the heart icon on any card to save it to your favorites. View all favorites by clicking the Favorites tab.</p>
-          </div>
-        </li>
-        <li class="flex gap-3">
-          <span class="flex-shrink-0 w-8 h-8 bg-[#5B6ABF] text-white rounded-full flex items-center justify-center font-bold text-sm">5</span>
-          <div>
-            <strong class="text-[#2D2D2D]">Discover Random APIs</strong>
-            <p class="mt-1">Click "Discover Random API" to find unexpected APIs for inspiration. Use "Roll Again" for more.</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <section class="space-y-4">
-      <h2 class="text-xl font-semibold text-[#2D2D2D] mb-2">Frequently Asked Questions</h2>
+    <div class="space-y-4">
 
       <details class="bg-white/90 rounded-xl border border-[#E5E2DC] p-5 group">
         <summary class="font-medium text-[#2D2D2D] cursor-pointer list-none flex justify-between items-center">
-          <span>Is Public API Finder free to use?</span>
+          <span>What is a public API?</span>
           <svg class="w-5 h-5 text-[#6B7280] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </summary>
-        <p class="mt-3 text-[#6B7280]">Yes, absolutely! Public API Finder is completely free. No account or registration is required.</p>
-      </details>
-
-      <details class="bg-white/90 rounded-xl border border-[#E5E2DC] p-5 group">
-        <summary class="font-medium text-[#2D2D2D] cursor-pointer list-none flex justify-between items-center">
-          <span>Where does the API data come from?</span>
-          <svg class="w-5 h-5 text-[#6B7280] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <p class="mt-3 text-[#6B7280]">The data is derived from the popular public-apis GitHub repository and is served as a static JSON file for fast performance.</p>
-      </details>
-
-      <details class="bg-white/90 rounded-xl border border-[#E5E2DC] p-5 group">
-        <summary class="font-medium text-[#2D2D2D] cursor-pointer list-none flex justify-between items-center">
-          <span>Are my favorites saved?</span>
-          <svg class="w-5 h-5 text-[#6B7280] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <p class="mt-3 text-[#6B7280]">Yes, favorites are saved in your browser's localStorage. They persist across sessions but are not synced across devices. You can also export your favorites as a JSON file.</p>
-      </details>
-
-      <details class="bg-white/90 rounded-xl border border-[#E5E2DC] p-5 group">
-        <summary class="font-medium text-[#2D2D2D] cursor-pointer list-none flex justify-between items-center">
-          <span>What do the badges on API cards mean?</span>
-          <svg class="w-5 h-5 text-[#6B7280] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <div class="mt-3 text-[#6B7280] space-y-2">
-          <p><strong>Auth:</strong> Shows the authentication type - None (no auth needed), API Key (requires a free key), or OAuth (requires OAuth flow).</p>
-          <p><strong>HTTPS:</strong> Whether the API supports secure HTTPS connections.</p>
-          <p><strong>CORS:</strong> Whether the API supports Cross-Origin Resource Sharing, important for frontend JavaScript calls.</p>
+        <div class="mt-3 text-[#6B7280] space-y-3">
+          <p>A public API (Application Programming Interface) is a structured interface that allows external developers to request data or functionality from an online service. Think of it as a standardized way for software programs to communicate with each other over the internet.</p>
+          <p>Public APIs make their endpoints accessible to anyone — not just internal engineering teams — typically at no cost or through a generous free tier. This means you can build an application that displays real-time weather data, live stock prices, movie information, sports scores, or geographic details without having to collect or maintain that data yourself. You simply make a structured request to the API, and it returns a response, usually in JSON format, that you can use in your own application.</p>
+          <p>For example, instead of building a weather data collection system — which would require satellites, sensors, and meteorologists — you can call a weather API with a city name and receive a structured response containing temperature, humidity, wind speed, and a five-day forecast in milliseconds. Public APIs are the infrastructure layer that makes modern app development efficient and accessible for individual developers and small teams.</p>
         </div>
       </details>
 
       <details class="bg-white/90 rounded-xl border border-[#E5E2DC] p-5 group">
         <summary class="font-medium text-[#2D2D2D] cursor-pointer list-none flex justify-between items-center">
-          <span>Can I suggest a new API?</span>
+          <span>How do I get started using a public API? A step-by-step guide for beginners.</span>
           <svg class="w-5 h-5 text-[#6B7280] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </summary>
-        <p class="mt-3 text-[#6B7280]">We welcome API suggestions! Send an email to <a href="mailto:taeshinkim11@gmail.com?subject=API%20Suggestion" class="text-[#5B6ABF] hover:underline">taeshinkim11@gmail.com</a> with the API name and link.</p>
+        <div class="mt-3 text-[#6B7280] space-y-3">
+          <p>Getting started with a public API is more straightforward than it may seem. Here is a beginner-friendly step-by-step process:</p>
+          <p><strong>Step 1 — Find a suitable API:</strong> Use Public API Finder to identify an API that matches your project's data needs. If you are just learning, start with a "No Auth" API — these require no registration and let you make requests immediately.</p>
+          <p><strong>Step 2 — Read the documentation:</strong> Every API has a documentation page that explains what endpoints are available, what parameters each endpoint accepts, and what the response looks like. Spend at least 10–15 minutes reading the docs before writing any code. Good documentation will include example requests and responses that you can copy and test immediately.</p>
+          <p><strong>Step 3 — Register and get an API key (if required):</strong> If the API requires an API key, sign up on the API provider's website. This usually involves entering an email address, verifying it, and then finding the API key in your account dashboard. Copy and store this key securely — it identifies your application and tracks your usage against rate limits.</p>
+          <p><strong>Step 4 — Test the API manually:</strong> Before integrating the API into your code, test it using a browser (for simple GET requests) or a tool like Postman, Insomnia, or the curl command in your terminal. Making a manual test request first helps you verify the API is working and understand the response structure before writing any integration code.</p>
+          <p><strong>Step 5 — Integrate into your application:</strong> Use your language's HTTP library (fetch in JavaScript, requests in Python, etc.) to call the API from your application code. Parse the JSON response and use the data in your UI or application logic. Handle errors gracefully — APIs can occasionally be unavailable or return unexpected responses, and your application should degrade gracefully when that happens.</p>
+        </div>
       </details>
 
       <details class="bg-white/90 rounded-xl border border-[#E5E2DC] p-5 group">
         <summary class="font-medium text-[#2D2D2D] cursor-pointer list-none flex justify-between items-center">
-          <span>What languages are supported?</span>
+          <span>What does "No Auth" mean, and when should I choose it?</span>
           <svg class="w-5 h-5 text-[#6B7280] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </summary>
-        <p class="mt-3 text-[#6B7280]">The UI supports 8 languages: English, Korean, Japanese, Chinese (Simplified), Spanish, German, French, and Portuguese. The language is auto-detected from your browser settings, or you can change it using the dropdown in the header.</p>
+        <div class="mt-3 text-[#6B7280] space-y-3">
+          <p>"No Auth" means the API does not require any form of authentication to access. You can call the API endpoint directly — no API key, no OAuth token, no account registration of any kind. You simply send a request to the URL and receive data in response.</p>
+          <p>No Auth APIs are ideal in several situations. If you are a complete beginner learning how APIs work, starting with a No Auth API removes all setup friction and lets you focus on understanding the request-response cycle, JSON parsing, and data handling. If you are building a quick prototype or hackathon demo that needs to go live in hours, No Auth APIs eliminate the 15–30 minutes typically required to register, verify an email, and configure API key authentication. They are also perfect for static website integrations and situations where you want to call an API directly from client-side JavaScript without exposing an API key in your frontend code.</p>
+          <p>The trade-off is that No Auth APIs tend to be more restricted — they typically serve public, non-sensitive data (trivia questions, country information, fun facts, etc.) and may have lower rate limits than API-key-based services. For production applications that need reliable, high-volume access, you will usually want to move to an API key or OAuth-based service. But for learning and prototyping, No Auth APIs are an excellent starting point.</p>
+        </div>
       </details>
-    </section>
+
+      <details class="bg-white/90 rounded-xl border border-[#E5E2DC] p-5 group">
+        <summary class="font-medium text-[#2D2D2D] cursor-pointer list-none flex justify-between items-center">
+          <span>What is CORS and why does it matter for web developers?</span>
+          <svg class="w-5 h-5 text-[#6B7280] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="mt-3 text-[#6B7280] space-y-3">
+          <p>CORS stands for Cross-Origin Resource Sharing. It is a security mechanism built into all modern web browsers that restricts JavaScript running on one domain from making HTTP requests to a different domain, unless that other domain explicitly allows it.</p>
+          <p>Here is why this matters in practice: if your web application is hosted at myapp.com and it tries to call an API at api.someservice.com, the browser will first send a "preflight" request asking the API server whether it permits cross-origin requests from myapp.com. If the API server's response includes the appropriate CORS headers (specifically the Access-Control-Allow-Origin header), the browser allows the request. If not, the browser blocks the request entirely and returns a CORS error — even if the API itself is perfectly functional and publicly accessible.</p>
+          <p>This is why our directory displays a "CORS" badge for each API. If an API's CORS value is "Yes," you can call it directly from client-side JavaScript in a browser without any workaround. If it is "No" or unknown, attempting to call it from frontend JavaScript will likely fail with a CORS error. In that case, you would need to route the request through a backend server (which is not subject to browser CORS restrictions), use a CORS proxy, or choose a different API. For frontend developers and students building browser-based applications without a backend, filtering the directory to CORS-enabled APIs is one of the most practical time-savers we offer.</p>
+        </div>
+      </details>
+
+      <details class="bg-white/90 rounded-xl border border-[#E5E2DC] p-5 group">
+        <summary class="font-medium text-[#2D2D2D] cursor-pointer list-none flex justify-between items-center">
+          <span>How do I test an API before integrating it into my project?</span>
+          <svg class="w-5 h-5 text-[#6B7280] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="mt-3 text-[#6B7280] space-y-3">
+          <p>Testing an API before writing integration code is one of the most important habits you can develop as a developer. Here are the most practical methods, from simplest to most capable:</p>
+          <p><strong>Browser URL bar (for GET requests, No Auth APIs):</strong> The simplest test. If an API's documentation shows a GET endpoint — for example, https://api.example.com/data?city=London — you can paste that URL directly into your browser's address bar and see the raw JSON response. This works only for GET requests and only for APIs that require no authentication. It is instant and requires no tools.</p>
+          <p><strong>curl (command line):</strong> For APIs that require an API key or have more complex request structures, curl is a powerful command-line tool available on all major operating systems. You can set custom headers, send POST request bodies, and see the full response including HTTP status codes and response headers. The API documentation will usually include example curl commands you can copy and run directly.</p>
+          <p><strong>Postman or Insomnia (GUI tools):</strong> These are dedicated API testing applications with graphical interfaces. They let you save requests, organize them into collections, set environment variables (ideal for API keys), inspect response headers, and test different request configurations. Postman has a free tier that is more than sufficient for personal API testing, and it is the industry standard for API development and testing.</p>
+          <p>Whichever method you use, the key things to verify before integration are: the API returns the data structure you expect, the response time is acceptable for your use case, the authentication method works correctly, and the rate limits will accommodate your expected usage volume.</p>
+        </div>
+      </details>
+
+      <details class="bg-white/90 rounded-xl border border-[#E5E2DC] p-5 group">
+        <summary class="font-medium text-[#2D2D2D] cursor-pointer list-none flex justify-between items-center">
+          <span>Are all the APIs in the directory truly free to use?</span>
+          <svg class="w-5 h-5 text-[#6B7280] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="mt-3 text-[#6B7280] space-y-3">
+          <p>Our directory focuses on public APIs that offer free access, but it is important to understand what "free" means in the context of API services, because the specifics vary significantly.</p>
+          <p><strong>Truly free, no limits:</strong> Some APIs — particularly those marked "No Auth" — are completely free with no registration, no usage limits, and no cost regardless of how many requests you make. These are typically smaller projects, open data sources, or APIs maintained by enthusiasts and organizations that want to make data freely available.</p>
+          <p><strong>Free tier with rate limits:</strong> Many popular APIs offer a free tier that allows a certain number of requests per day or per month. For example, a weather API might allow 1,000 API calls per day for free, after which you need to upgrade to a paid plan. For personal projects, student work, and most side projects, these free tiers are more than sufficient. However, if your application grows significantly, you may eventually need to pay for higher rate limits.</p>
+          <p><strong>Free with API key registration:</strong> Some APIs require you to register for a free API key to access even the free tier. Registration is typically free and takes only a few minutes, but it means you cannot use the API without first creating an account with the provider. We mark these APIs with the "apiKey" authentication badge in our directory.</p>
+          <p>We always recommend checking the current pricing page of any API you plan to use for a production application, as pricing and free tier limits can change without notice. Our directory data reflects the APIs' availability at the time of curation, but API terms evolve over time.</p>
+        </div>
+      </details>
+
+      <details class="bg-white/90 rounded-xl border border-[#E5E2DC] p-5 group">
+        <summary class="font-medium text-[#2D2D2D] cursor-pointer list-none flex justify-between items-center">
+          <span>How often is the API directory updated?</span>
+          <svg class="w-5 h-5 text-[#6B7280] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="mt-3 text-[#6B7280] space-y-3">
+          <p>Our API directory is maintained as a curated static dataset derived from the public-apis GitHub repository, which is itself actively maintained by a large open-source community. We perform periodic reviews and updates to our dataset to reflect changes in API availability, authentication requirements, CORS support, and the addition of new APIs that meet our inclusion criteria.</p>
+          <p>In practice, the core dataset is quite stable — the vast majority of well-established public APIs in our directory have been available for years and change infrequently. The most common changes we track are: APIs that shut down or move to paid-only models, changes in authentication requirements (for example, an API that previously required no auth adding an API key requirement), and the addition of new APIs that become popular in the developer community.</p>
+          <p>If you discover that a listed API has changed significantly — its endpoint has moved, it now requires authentication, it has been discontinued, or it has updated its CORS policy — please let us know at <a href="mailto:taeshinkim11@gmail.com" class="text-[#5B6ABF] hover:underline">taeshinkim11@gmail.com</a>. Community-reported updates are the fastest way for us to maintain accuracy at scale, and we appreciate every report we receive.</p>
+        </div>
+      </details>
+
+      <details class="bg-white/90 rounded-xl border border-[#E5E2DC] p-5 group">
+        <summary class="font-medium text-[#2D2D2D] cursor-pointer list-none flex justify-between items-center">
+          <span>How can I suggest a new API to be added to the directory?</span>
+          <svg class="w-5 h-5 text-[#6B7280] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="mt-3 text-[#6B7280] space-y-3">
+          <p>We actively welcome API suggestions from the community. If you have discovered or built a public API that you believe would be valuable for other developers, we want to hear about it. Send an email to <a href="mailto:taeshinkim11@gmail.com?subject=API%20Suggestion" class="text-[#5B6ABF] hover:underline">taeshinkim11@gmail.com</a> with the subject line "API Suggestion" and include the following information:</p>
+          <p>The API's name and a brief description of what data or functionality it provides. The documentation URL so we can evaluate the API's quality and usability. The authentication type (No Auth, API Key, or OAuth). Whether it supports HTTPS and CORS. The category it belongs to (Weather, Finance, Sports, etc.). An indication of whether a free tier is available and what its limits are.</p>
+          <p>We evaluate suggestions based on several criteria: Is the API publicly accessible with a free tier? Is the documentation clear and complete enough for a developer to get started quickly? Is the API actively maintained? Does it fill a gap in our existing directory, or does it serve a meaningfully different use case than existing listings? APIs that meet these criteria are added to our dataset in the next update cycle. We prioritize suggestions where the community benefit is highest — APIs that solve common developer problems and are not already well-represented in our directory.</p>
+        </div>
+      </details>
+
+      <details class="bg-white/90 rounded-xl border border-[#E5E2DC] p-5 group">
+        <summary class="font-medium text-[#2D2D2D] cursor-pointer list-none flex justify-between items-center">
+          <span>What is rate limiting and how should I handle it?</span>
+          <svg class="w-5 h-5 text-[#6B7280] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="mt-3 text-[#6B7280] space-y-3">
+          <p>Rate limiting is a restriction placed by an API provider on how many requests you can make within a given time window. For example, an API might allow 60 requests per minute, 1,000 per day, or 100,000 per month on its free tier. When you exceed the limit, the API returns an error response — typically HTTP 429 (Too Many Requests) — instead of the expected data.</p>
+          <p>Rate limits exist for several good reasons. They protect the API provider's infrastructure from being overwhelmed by a single abusive user, they allow providers to offer free tiers sustainably without those free users impacting paid customers, and they encourage developers to build efficient applications that cache responses rather than making redundant requests.</p>
+          <p>Handling rate limits gracefully is an important part of building robust API integrations. Key strategies include: caching API responses so you are not re-requesting the same data unnecessarily; implementing exponential backoff (waiting progressively longer before retrying after a 429 error); keeping track of how many requests you have made and slowing down proactively as you approach your limit; and, for user-facing applications, showing a helpful message to users rather than a raw error when rate limits are hit.</p>
+          <p>Before committing to an API for a production application, always evaluate whether the free tier's rate limits are sufficient for your expected traffic. It is worth estimating your request volume at both your current user base and at 10x growth to make sure you will not hit a wall at an inconvenient moment. If the free tier is insufficient, many APIs offer affordable paid plans that dramatically increase rate limits — the documentation's pricing page will give you the numbers you need to plan ahead.</p>
+        </div>
+      </details>
+
+    </div>
   </main>
 
   <footer class="bg-white/80 border-t border-[#E5E2DC] py-6">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center text-xs text-[#9ca3af]">
-      <p>&copy; 2026 Public API Finder. All rights reserved.</p>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap justify-center gap-4 mb-3 text-sm">
+        <a href="../pages/about.html" class="text-[#5B6ABF] hover:underline">About</a>
+        <a href="../pages/faq.html" class="text-[#5B6ABF] hover:underline">FAQ</a>
+        <a href="../pages/privacy.html" class="text-[#5B6ABF] hover:underline">Privacy Policy</a>
+        <a href="../pages/terms.html" class="text-[#5B6ABF] hover:underline">Terms of Service</a>
+      </div>
+      <p class="text-center text-xs text-[#9ca3af]">&copy; 2026 Public API Finder. All rights reserved.</p>
     </div>
   </footer>
   <script src="../js/i18n.js"></script>

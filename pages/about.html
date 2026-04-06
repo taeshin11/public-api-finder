@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Public API Finder</title>
-  <meta name="description" content="Learn about Public API Finder, a free directory of public APIs for developers, students, and hobbyists.">
+  <title>About - Public API Finder | Free Public API Directory for Developers</title>
+  <meta name="description" content="Learn about Public API Finder, the free directory that helps developers, students, and hackathon participants discover and explore hundreds of public APIs organized by category.">
+  <meta name="keywords" content="free public APIs, API directory, developer tools, open APIs, REST API list, public API finder, API for developers">
   <link rel="canonical" href="https://public-api-finder.vercel.app/pages/about.html">
   <link rel="manifest" href="/manifest.json">
-  <meta property="og:title" content="About - Public API Finder">
-  <meta property="og:description" content="Learn about Public API Finder, a free directory of public APIs for developers.">
+  <meta property="og:title" content="About - Public API Finder | Free Public API Directory">
+  <meta property="og:description" content="Discover how Public API Finder helps developers find reliable, free, and well-documented public APIs for every type of project.">
   <meta property="og:url" content="https://public-api-finder.vercel.app/pages/about.html">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔌</text></svg>">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -39,52 +40,67 @@
       <h1 class="text-3xl font-bold text-[#2D2D2D] mb-6">About Public API Finder</h1>
 
       <section class="bg-white/90 rounded-xl border border-[#E5E2DC] p-6 sm:p-8 mb-6">
-        <h2 class="text-xl font-semibold text-[#2D2D2D] mb-4">What is Public API Finder?</h2>
-        <p class="text-[#6B7280] mb-4">Public API Finder is a free, searchable, and categorized directory of public APIs designed for developers, hobbyists, and students. Our goal is to make it easy to discover the perfect API for your next project.</p>
-        <p class="text-[#6B7280] mb-4">Whether you are building a weather app, a financial dashboard, a trivia game, or just looking for inspiration, we have organized 200+ APIs across 15+ categories to help you find exactly what you need.</p>
+        <h2 class="text-xl font-semibold text-[#2D2D2D] mb-4">The Problem We Solve</h2>
+        <p class="text-[#6B7280] mb-4">Every developer building a side project, every student completing a portfolio assignment, every hackathon team racing against a deadline faces the same frustrating challenge: finding a reliable, free, well-documented API that actually works for their use case. The internet is full of API lists, but most are outdated, poorly organized, or buried in GitHub repositories that require significant effort just to navigate.</p>
+        <p class="text-[#6B7280] mb-4">You might spend an hour searching for a weather API, evaluating five options, reading documentation pages, testing endpoints, and discovering that three of them require paid plans, one has broken CORS support for browser apps, and the last one has rate limits so restrictive that it is useless for any real project. That is an hour of your project time gone — not on building, but on searching.</p>
+        <p class="text-[#6B7280]">Public API Finder exists to give that hour back. We aggregate, organize, and surface the most relevant APIs for any use case in seconds, with the key technical metadata — authentication type, HTTPS support, CORS compatibility — displayed right on the card so you can filter to exactly what your project needs before you ever click through to the documentation.</p>
       </section>
 
       <section class="bg-white/90 rounded-xl border border-[#E5E2DC] p-6 sm:p-8 mb-6">
-        <h2 class="text-xl font-semibold text-[#2D2D2D] mb-4">Features</h2>
-        <ul class="space-y-3 text-[#6B7280]">
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-[#5CB85C] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-            <span><strong>Category Browsing</strong> - Navigate APIs by category using the sidebar or horizontal tabs.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-[#5CB85C] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-            <span><strong>Instant Search</strong> - Filter APIs in real-time as you type.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-[#5CB85C] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-            <span><strong>Favorites</strong> - Save your favorite APIs with localStorage persistence.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-[#5CB85C] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-            <span><strong>Random Discovery</strong> - Find unexpected APIs with the Random API button.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-[#5CB85C] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-            <span><strong>8 Languages</strong> - Available in English, Korean, Japanese, Chinese, Spanish, German, French, and Portuguese.</span>
-          </li>
+        <h2 class="text-xl font-semibold text-[#2D2D2D] mb-4">What Public API Finder Is</h2>
+        <p class="text-[#6B7280] mb-4">Public API Finder is a free, searchable, and categorized directory of public APIs — web services that provide data and functionality that any developer can access, most of them at no cost. Our directory currently indexes more than 200 APIs spanning over 15 categories, derived and curated from the widely respected <a href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener noreferrer" class="text-[#5B6ABF] hover:underline">public-apis open-source project</a> on GitHub.</p>
+        <p class="text-[#6B7280] mb-4">Unlike raw GitHub lists, our directory is designed for fast discovery. The interface provides instant search filtering, category browsing, favorites saving, and a random API discovery feature — all without requiring an account, login, or payment of any kind. It is a read-only reference tool, and that simplicity is a deliberate design choice: the faster you find the right API, the sooner you can get back to building.</p>
+        <p class="text-[#6B7280]">The site is built with static HTML, CSS, and vanilla JavaScript, serving API data from a lightweight JSON file. This means zero backend costs, zero API calls to third-party services on every page load, and extremely fast performance regardless of where in the world you are accessing it from.</p>
+      </section>
+
+      <section class="bg-white/90 rounded-xl border border-[#E5E2DC] p-6 sm:p-8 mb-6">
+        <h2 class="text-xl font-semibold text-[#2D2D2D] mb-4">API Categories in Our Directory</h2>
+        <p class="text-[#6B7280] mb-4">Our directory covers APIs across the most commonly needed categories for web and mobile development. Here is what you will find:</p>
+        <ul class="space-y-2 text-[#6B7280]">
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-[#5B6ABF] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong>Weather and Environment</strong> — Current conditions, forecasts, historical data, air quality, and geolocation-based weather services.</span></li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-[#5B6ABF] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong>Finance and Cryptocurrency</strong> — Stock prices, exchange rates, crypto market data, financial news, and economic indicators.</span></li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-[#5B6ABF] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong>Entertainment and Movies</strong> — Film databases, TV show data, streaming availability, movie ratings, and cast information.</span></li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-[#5B6ABF] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong>Sports</strong> — Live scores, team statistics, player data, fixtures, and results across major sports leagues worldwide.</span></li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-[#5B6ABF] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong>Science and Education</strong> — NASA imagery, space data, biology databases, educational content APIs, and research data sources.</span></li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-[#5B6ABF] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong>Games and Anime</strong> — Game data, anime databases, trivia APIs, and gaming statistics platforms.</span></li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-[#5B6ABF] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong>Food and Recipe</strong> — Recipe databases, nutritional information, ingredient lookups, and food delivery data.</span></li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-[#5B6ABF] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong>Geography and Maps</strong> — Country data, timezone information, IP geolocation, address validation, and mapping services.</span></li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-[#5B6ABF] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong>Development Utilities</strong> — Lorem ipsum generators, color palette APIs, QR code generators, URL shorteners, and developer tool APIs.</span></li>
         </ul>
       </section>
 
       <section class="bg-white/90 rounded-xl border border-[#E5E2DC] p-6 sm:p-8 mb-6">
-        <h2 class="text-xl font-semibold text-[#2D2D2D] mb-4">Data Source</h2>
-        <p class="text-[#6B7280] mb-4">Our API directory is derived from the popular <a href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener noreferrer" class="text-[#5B6ABF] hover:underline">public-apis</a> GitHub repository, curated and organized for easy discovery. The data is served as a static JSON file, ensuring zero API costs and lightning-fast performance.</p>
+        <h2 class="text-xl font-semibold text-[#2D2D2D] mb-4">Filtering by Technical Properties</h2>
+        <p class="text-[#6B7280] mb-4">One of the most practical features of Public API Finder is the ability to evaluate APIs by their technical properties at a glance, before reading a line of documentation. Each API card displays three key technical attributes:</p>
+        <p class="text-[#6B7280] mb-3"><strong>Authentication Type:</strong> APIs fall into three authentication categories — "No Auth" (you can call the API with no credentials at all, ideal for learning and prototyping), "API Key" (you register for a free key to identify your requests, the most common model for free-tier APIs), and "OAuth" (a more involved authorization flow used by APIs that access user-specific data). Filtering to "No Auth" APIs is particularly valuable for students and hackathon participants who need to demonstrate a working integration quickly without account setup overhead.</p>
+        <p class="text-[#6B7280] mb-3"><strong>HTTPS Support:</strong> Secure HTTPS is essential for any production application and required by modern browsers for many features. Our directory flags whether each API supports HTTPS connections, making it easy to rule out legacy APIs that only serve plain HTTP — which would trigger security warnings and be blocked in many modern deployment environments.</p>
+        <p class="text-[#6B7280]"><strong>CORS Support:</strong> Cross-Origin Resource Sharing (CORS) determines whether a browser-based JavaScript application can call an API directly from the frontend. APIs without proper CORS headers cannot be called from client-side JavaScript in a browser — you would need a backend proxy instead. For frontend developers and hackathon teams building web apps without a backend, filtering to CORS-enabled APIs saves significant debugging time.</p>
+      </section>
+
+      <section class="bg-white/90 rounded-xl border border-[#E5E2DC] p-6 sm:p-8 mb-6">
+        <h2 class="text-xl font-semibold text-[#2D2D2D] mb-4">Who Uses Public API Finder</h2>
+        <p class="text-[#6B7280] mb-4"><strong>Independent Developers and Side-Project Builders</strong> use Public API Finder to quickly identify the right data source for a new project idea without spending hours searching and evaluating APIs individually. The combination of instant search, category filtering, and technical property badges makes it possible to go from "I need a weather API that supports CORS and doesn't require auth" to a shortlist of viable options in under two minutes.</p>
+        <p class="text-[#6B7280] mb-4"><strong>Students Learning API Integration</strong> find the directory invaluable as a starting point for portfolio projects and coursework. APIs with "No Auth" and CORS support are ideal for beginner projects because they can be integrated directly into a static webpage or CodePen without any backend setup. The directory's random discovery feature is also popular among students looking for an interesting API to build a creative project around.</p>
+        <p class="text-[#6B7280] mb-4"><strong>Hackathon Participants</strong> are one of our most active user groups. In a 24- or 48-hour hackathon, time spent on API research and troubleshooting is time not spent building. Public API Finder's pre-vetted directory with technical metadata helps teams make fast, informed API choices and get to implementation quickly.</p>
+        <p class="text-[#6B7280]"><strong>Educators and Bootcamp Instructors</strong> use Public API Finder to find appropriate APIs for teaching exercises — APIs that are free, well-documented, and technically accessible to students at different skill levels. Our category organization makes it easy to find topic-appropriate APIs for specific lesson plans.</p>
       </section>
 
       <section class="bg-white/90 rounded-xl border border-[#E5E2DC] p-6 sm:p-8">
-        <h2 class="text-xl font-semibold text-[#2D2D2D] mb-4">Contact</h2>
-        <p class="text-[#6B7280]">Have feedback, suggestions, or found an issue? Reach out at <a href="mailto:taeshinkim11@gmail.com?subject=Public%20API%20Finder%20Feedback" class="text-[#5B6ABF] hover:underline">taeshinkim11@gmail.com</a>.</p>
+        <h2 class="text-xl font-semibold text-[#2D2D2D] mb-4">Contact and Suggestions</h2>
+        <p class="text-[#6B7280]">Have feedback, found an inaccurate listing, or want to suggest a new API for the directory? We welcome all input. Reach out at <a href="mailto:taeshinkim11@gmail.com?subject=Public%20API%20Finder%20Feedback" class="text-[#5B6ABF] hover:underline">taeshinkim11@gmail.com</a> and our team will review your message promptly.</p>
       </section>
     </article>
   </main>
 
   <footer class="bg-white/80 border-t border-[#E5E2DC] py-6">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center text-xs text-[#9ca3af]">
-      <p>&copy; 2026 Public API Finder. All rights reserved.</p>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap justify-center gap-4 mb-3 text-sm">
+        <a href="../pages/about.html" class="text-[#5B6ABF] hover:underline">About</a>
+        <a href="../pages/faq.html" class="text-[#5B6ABF] hover:underline">FAQ</a>
+        <a href="../pages/privacy.html" class="text-[#5B6ABF] hover:underline">Privacy Policy</a>
+        <a href="../pages/terms.html" class="text-[#5B6ABF] hover:underline">Terms of Service</a>
+      </div>
+      <p class="text-center text-xs text-[#9ca3af]">&copy; 2026 Public API Finder. All rights reserved.</p>
     </div>
   </footer>
   <script src="../js/i18n.js"></script>
